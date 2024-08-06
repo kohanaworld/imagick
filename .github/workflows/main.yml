@@ -10,7 +10,7 @@ on:
 jobs:
   test_basic:
     name: basic PHP ${{ matrix.php }} - I ${{ matrix.imagemagick }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
@@ -18,7 +18,7 @@ jobs:
         php: [ 5.4 ]
         imagemagick: [
             7.1.0-13,
-            6.9.2-0,
+            6.9.2-0
         ]
 
     steps:
@@ -36,6 +36,7 @@ jobs:
           sudo apt-get install -y fonts-urw-base35 || true
           sudo apt-get install -y libfreetype6-dev || true
           sudo apt-get install -y texlive-fonts-recommended || true
+          sudo apt-get install -y libmagickwand-6.q16-6 || true
 
       - name: Cache ImageMagick
         uses: actions/cache@v3
