@@ -27,7 +27,7 @@ If you need to compile Imagick from source, first you should install [ImageMagic
 Once ImageMagick is installed, the following commands will compile and install Imagick:
 
 ```
-git clone https://github.com/Imagick/imagick
+git clone https://github.com/kohanaworld/imagick
 cd imagick
 phpize && ./configure
 make
